@@ -1,0 +1,22 @@
+
+{
+  "launchType": "FARGATE",
+  "schedulingStrategy": "REPLICA",
+  "desiredCount": 1,
+  "networkConfiguration": {
+    "awsvpcConfiguration": {
+      "subnets": [
+        "subnet-04e50ed68770365ee",
+        "subnet-0990754d703e0242a",
+        "subnet-0a9e4fb4aded4b099"
+      ],
+      "securityGroups": [
+        "sg-0b6bd3c3d3206f500"
+      ],
+      "assignPublicIp": "DISABLED"
+    }
+  },
+  "serviceName": "bin-qa-bdp-maxwell-card",
+  "cluster": "arn:aws:ecs:ap-northeast-1:462475635429:cluster/tk-qa1-bigdata-ecs-cluster",
+  "taskDefinition": "arn:aws:ecs:ap-northeast-1:462475635429:task-definition/bin-qa-bdp-maxwell-card"
+}
